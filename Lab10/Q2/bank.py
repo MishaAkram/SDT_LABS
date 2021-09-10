@@ -16,7 +16,7 @@ class Bank_Account:
         if self.balance[-1]>=self.wamount:
             self.bal = self.balance[-1] - self.wamount
             self.balance.append(self.bal)        
-            print("You Withdrew:", self.wamount, self.balance, self.bal)
+            print("You Withdrew:", self.wamount)
             return (self.bal)
         else:
             print("Insufficient balance ")
@@ -42,8 +42,6 @@ class Saving_Account(Bank_Account):
         return (min(self.balance)*4)/100
                
 def main():
-    q=Bank_Account(3000)
-    q.deposit()
     s = Bank_Account(3000,8000)
     s.deposit()
     s.withdraw()
